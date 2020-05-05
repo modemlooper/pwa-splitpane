@@ -37,8 +37,8 @@ export class MyApp {
           <ion-route url='/' component='app-home'></ion-route>
           <ion-route url='/profile/:name' component='app-profile'></ion-route>
         </ion-router>
-        <ion-split-pane id="splitPane">
-            <ion-menu side="start">
+        <ion-split-pane content-id="mainAppContent">
+            <ion-menu side="start" content-id="mainAppContent" menu-id="mainMenuOutlet">
                 <ion-header>
                   <ion-toolbar>
                     <ion-title>PWA</ion-title>
@@ -58,7 +58,7 @@ export class MyApp {
                 </ion-content>
             </ion-menu>
 
-            <ion-nav main></ion-nav>
+            <ion-router-outlet id="mainAppContent"></ion-router-outlet>
         </ion-split-pane>
     </ion-app>
     );
